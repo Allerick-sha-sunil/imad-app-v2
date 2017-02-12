@@ -5,6 +5,9 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var page= `<!doctype html>
+           <h1> hi </h1>`;
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -14,7 +17,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/page', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'page.html'));
+  res.send(page);
 });
 
 app.get('/ui/madi.png', function (req, res) {
