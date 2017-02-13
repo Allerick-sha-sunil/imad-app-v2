@@ -16,6 +16,11 @@ body {
     font-weight: bold;
 }
 
+.container{
+    padding-left: 2.5cm;
+    padding-right:2.5cm;
+}
+
 .img-medium {
     height: 200px;
 }
